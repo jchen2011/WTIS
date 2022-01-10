@@ -1,0 +1,388 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    background-color: #22232d;
+    font-family: sans-serif;
+}
+
+/* Homepagina */
+#logo {
+    text-transform: uppercase;
+}
+
+.call-to-action-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.call-to-action-container h2 {
+    margin-bottom: 0;
+    font-size: 4.5rem;
+    text-align: center;
+    color: white;
+}
+
+.call-to-action-container p {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.call-to-action-btn {
+    display: block;
+    background: #e24759;
+    width: 80%;
+    height: 40px;
+    text-decoration: none;
+    line-height: 2.5rem;
+    border: 2px solid #22232d;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* Abonnement */
+
+.abonnement-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+}
+
+.abonnement-container p {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.abonnement-container article {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #1a1b24;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.4);
+    margin: 20px;
+}
+
+.abonnement-container ul {
+    list-style: none;
+}
+
+.abonnement-container li {
+    padding: 4px;
+}
+
+.abonnement-container h2 {
+    text-align: center;
+}
+
+.icon {
+    padding-right: 10px;
+}
+
+/* Filmoverzicht */
+.film-section {
+    margin: 1rem;
+}
+
+.film-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.film-card {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+.film-card-img {
+    width: 100%;
+    transition: transform 450ms;
+}
+
+.film-card-img:hover {
+    transform: scale(1.08);
+}
+
+.film-header {
+    color: white;
+}
+
+.films-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 20px;
+}
+/* Inloggen */
+
+
+/* Over ons */
+.overons-container h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px auto;
+}
+
+/* Privacyverklaring */
+.privacyverklaring {
+    color: white;
+    margin: 30px;
+}
+
+/* Registreren */
+.registreer {
+    color: white;
+    text-align: center;
+}
+
+.foutmelding {
+    color: red; 
+    font-size: 24px; 
+    text-align: center; 
+    margin-top: 0;
+}
+
+/* Navigatie */
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    color: #e24759;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1b24;
+    padding: 0 2.5%;
+}
+
+nav {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 1.25em;
+}
+
+nav li a {
+    display: block;
+}
+
+nav li:hover .sub-menu {
+    display: block;   
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.sub-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color:#1a1b24;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    color: white;
+}
+
+
+/* Algemeen (over meerdere pagina's) */
+.container,
+.overons-container {
+    margin: 30px auto;
+    width: 275px;
+    color: white;
+}
+
+.container form,
+.overons-container .overons-content{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #1a1b24;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.4);  
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container input {
+    width: 90%;
+    height: 40px;
+    border-radius: 6px;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+.container select {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+.btn {
+    display: block;
+    background: #22232d;
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+    line-height: 2.5rem;
+    border: 2px solid #22232d;
+    color: white;
+    font-weight: 700;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* Ingelogd pagina */
+.ingelogd {
+    border: 3px solid red;
+    padding: 10px;
+}
+
+.zoek-filter-container {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-content: center;
+    margin: 15px;
+}
+
+.zoek-container {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Detailpagina */
+.detailpagina-container {
+    color: white;
+    margin: 50px auto;
+    width: 500px;
+    text-align: center;
+    background: #1a1b24;
+    padding: 20px;
+}
+
+.detailpagina-container h4{
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.detailpagina-container p {
+    text-align: left;
+}
+.poster {
+    width: 300px;
+    height: 400px;
+}
+
+/* Trailer */
+video {
+    width: 50%;
+    display: block;
+    margin: 50px auto;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 1250px) {
+    .film-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .overons-container h2 {
+        font-size: 2.5em;
+    }
+    .overons-container p {
+        font-size: 1.5em;
+    }
+    .abonnement-container {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        font-size: 1.25em;
+    }
+
+    .container {
+        width: 450px;
+        font-size: 1.5em;
+    }
+    .detailpagina-container {
+        font-size: 2rem;
+    }
+
+    video {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .film-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .abonnement-container {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 70%;
+        font-size: 1.25em;
+    }
+    .container {
+        width: 200px;
+        font-size: .75Rem;
+    }
+
+    .overons-container {
+        width: 100px;
+    }
+    .overons-container h2 {
+        font-size: 1em;
+    }
+    .overons-container p {
+        font-size: 1em;
+    }
+    .detailpagina-container {
+        font-size: 1rem;
+        width: 70%; 
+    }
+    .registeer {
+        font-size: 10px;
+    }
+}
+
+
