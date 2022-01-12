@@ -1,12 +1,12 @@
 <?php
 
-require_once 'data/customer.php';
+require_once 'data/klant.php';
 
 $allesIngevuld = isset($_POST['email']) && isset($_POST['wachtwoord']) && isset($_POST['wachtwoord_check']) && isset($_POST['voornaam']) && isset($_POST['achternaam']) && isset($_POST['land']) && isset($_POST['geboortedatum']) && isset($_POST['rekeningnummer']) && isset($_POST['abonnement']) && isset($_POST['betaalwijze']);
 $land = zitLandInDatabase($_POST['land']);
 if (empty($_POST['email']) || empty($_POST['wachtwoord']) || empty($_POST['wachtwoord_check']) || empty($_POST['voornaam']) || empty($_POST['achternaam']) || empty($_POST['land']) || empty($_POST['geboortedatum']) || empty($_POST['rekeningnummer']) || empty($_POST['abonnement']) || empty($_POST['betaalwijze'])) {
     header('Location: ../registratieformulier.php?registreren=empty');
-} else if (!filter_var($_POST['email'])) {
+} else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     header('Location: ../registratieformulier.php?registreren=email');
 } else if (!preg_match("/^[a-zA-Z-' ]*$/", $_POST['voornaam'])) {
     header('Location: ../registratieformulier.php?registreren=voornaam');

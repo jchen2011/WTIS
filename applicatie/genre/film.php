@@ -1,6 +1,7 @@
 <?php
-  require_once '../components/components.php';
-  require_once '../data/db_connectie.php';
+  require_once '../components/header.php';
+  require_once '../components/footer.php';
+  require_once '../components/filmdetails.php';
   require_once '../data/verwerkFilm.php';
   session_start();
 
@@ -46,7 +47,8 @@
                 <a class="btn" href="trailer.php">Speel af</a>
 
                 <h4>Facts</h4>
-                <p>Directors: <?php
+                <p>Directors: 
+                <?php
                 $arrayGrootte = count($directors);
                     if($arrayGrootte > 1) {
                         echo implode(', ', array_map(function($d){return "$d[firstname] $d[lastname]";}, $directors));
@@ -56,7 +58,8 @@
                             echo $hoofdrolspelers['firstname'] . ' ' . $hoofdrolspelers['lastname'];
                         }
                     }
-                ?></p>
+                ?>
+                </p>
 
                 <h4>De cast</h4>
                 <?php 

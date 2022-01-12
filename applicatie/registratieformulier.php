@@ -1,6 +1,8 @@
 <?php
-require_once 'components/components.php';
-$empty = '';
+require_once 'components/header.php';
+require_once 'components/footer.php';
+require_once 'data/landen.php';
+$landen = haalAlleLandenOp();
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +79,13 @@ $empty = '';
                 </div>
                 <div>
                     <label for="land">Land</label>
-                    <input type="text" name="land" id="land" value="Netherlands" required>
+                    <select name="land" id="abonnement" required>
+                        <?php
+                            foreach($landen as $land) {
+                                echo '<option value="' . $land['country_name'] . '">' . $land['country_name'] . '</option>';
+                            }
+                        ?>
+                    </select>
                 </div>
                 <div>
                     <label for="geboortedatum">Geboortedatum</label>

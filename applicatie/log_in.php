@@ -1,9 +1,9 @@
 <?php
-require_once 'data/customer.php';
+require_once 'data/klant.php';
 
 session_start();
 if(!empty($_POST['email']) && !empty($_POST['wachtwoord'])) {
-    $user = verkrijg($_POST['email']);
+    $user = verkrijgGegevens($_POST['email']);
 
     if (password_verify($_POST['wachtwoord'], $user['password']) && $user) {
         $_SESSION['user'] = $user;

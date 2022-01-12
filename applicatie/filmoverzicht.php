@@ -1,7 +1,7 @@
 <?php
 require_once 'data/verwerkFilm.php';
-require_once 'components/components.php';
-
+require_once 'components/header.php';
+require_once 'components/footer.php';
 
 $onlangsToegevoegd = haal4RecenteFilmsOp();
 $action = haal4FilmsUitGenre('action');

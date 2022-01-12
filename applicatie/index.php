@@ -1,5 +1,6 @@
 <?php
-require_once 'components/components.php';
+require_once 'components/header.php';
+require_once 'components/footer.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ require_once 'components/components.php';
 
     <main>
         <section class="call-to-action-container">
-            <h2>Onbeperkt films, series en meer kijken.</h2>
+            <h2>Onbeperkt films, series en meer kijken voor jongeren.</h2>
             <p>Probeer Premium 30 dagen gratis. Daarna slechts €11.99 per maand.</p>
             <a class="call-to-action-btn" href="registratieformulier.php">Neem een gratis proefabonnement</a>
         </section>

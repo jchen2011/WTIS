@@ -1,7 +1,10 @@
 <?php
-require_once '../components/components.php';
+require_once '../components/header.php';
+require_once '../components/footer.php';
 require_once '../data/verwerkFilm.php';
+
 session_start();
+
 if (!isset($_SESSION['user'])) {
     header('Location: ../inloggen.php?inloggen=error');
 }
@@ -10,8 +13,8 @@ $onlangsToegevoegd = haal4RecenteFilmsOp();
 $action = haal4FilmsUitGenre('action');
 $romance = haal4FilmsUitGenre('romance');
 $adventure = haal4FilmsUitGenre('adventure');
-
 ?>
+
 <!DOCTYPE html>
 <html lang="nl">
 

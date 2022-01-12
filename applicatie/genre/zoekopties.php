@@ -1,14 +1,16 @@
 <?php
-require_once '../components/components.php';
-require_once '../data/db_connectie.php';
+require_once '../components/header.php';
+require_once '../components/footer.php';
 require_once '../data/verwerkSearch.php';
-    session_start(); 
-    if (!isset($_SESSION['user'])) {
-        header('Location: ../inloggen.php?inloggen=error');
-    }
-    $alleGenre = haalGenresOp();
-?>
 
+session_start(); 
+
+if (!isset($_SESSION['user'])) {
+    header('Location: ../inloggen.php?inloggen=error');
+}
+
+$alleGenre = haalGenresOp();
+?>
 
 <!DOCTYPE html>
 <html lang="nl">
@@ -24,7 +26,6 @@ require_once '../data/verwerkSearch.php';
     <header>
     <?php maakHeaderIngelogd('zoekopties')?>
     </header>
-
     <main>
         <h1 class="registreer">Zoek naar een film of serie</h1>
         <section class="container">
@@ -37,8 +38,8 @@ require_once '../data/verwerkSearch.php';
                                 echo '<p class="foutmelding">Geen veld is ingevuld</p>';
                                 break;
                             case 'error':
-                            echo '<p class="foutmelding">Film niet gevonden</p>';
-                            break;
+                                echo '<p class="foutmelding">Film niet gevonden</p>';
+                                break;
                             default:
                                 break;
                         }

@@ -1,5 +1,6 @@
 <?php
-require_once 'components/components.php';
+require_once 'components/header.php';
+require_once 'components/footer.php';
 ?>
 
 <!DOCTYPE html>

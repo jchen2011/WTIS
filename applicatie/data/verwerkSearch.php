@@ -20,9 +20,15 @@ function zitTitelInDatabase($data) {
     $titel = '%' . $data . '%';
     $query = $verbinding->prepare("SELECT * FROM Movie WHERE title LIKE ?");
     $query->execute([$titel]);
-    return $query->fetch();
+    return $query->fetchAll();
 }
 
+function zitGenreInDatabase($genre) {
+    $verbinding = maakVerbinding();
+    $query = $verbinding->prepare("SELECT mg.movie_id, title FROM Movie_Genre mg INNER JOIN Movie m ON mg.movie_id = m.movie_id WHERE genre_name = ?");
+    $query->execute([$genre]);
+    return $query->fetchAll();
+}
 function zitTitelEnGenreInDatabase($genre, $title) {
     $verbinding = maakVerbinding();
     $titel = '%' . $title . '%';
